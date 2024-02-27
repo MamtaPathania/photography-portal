@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = ({ env }) => {
-  const client = env('DATABASE_CLIENT', 'sqlite');
+  const client = env('DATABASE_CLIENT', 'mysql');
 
   const connections = {
     mysql: {
@@ -9,7 +9,7 @@ module.exports = ({ env }) => {
         connectionString: env('DATABASE_URL'),
         host: env('DATABASE_HOST', '88.99.5.236'),
         port: env.int('DATABASE_PORT', 3306),
-        database: env('DATABASE_NAME', 'store'),
+        database: env('DATABASE_NAME', 'strapi'),
         user: env('DATABASE_USERNAME', 'visiontrek'),
         password: env('DATABASE_PASSWORD', '0Gloadmin123#$'),
         ssl: env.bool('DATABASE_SSL', false) && {
@@ -30,7 +30,7 @@ module.exports = ({ env }) => {
       connection: {
         host: env('DATABASE_HOST', '88.99.5.236'),
         port: env.int('DATABASE_PORT', 3306),
-        database: env('DATABASE_NAME', 'store'),
+        database: env('DATABASE_NAME', 'strapi'),
         user: env('DATABASE_USERNAME', 'visiontrek'),
         password: env('DATABASE_PASSWORD', '0Gloadmin123#$'),
         ssl: env.bool('DATABASE_SSL',false) && {
