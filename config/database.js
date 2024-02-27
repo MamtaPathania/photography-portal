@@ -12,7 +12,7 @@ module.exports = ({ env }) => {
         database: env('DATABASE_NAME', 'store'),
         user: env('DATABASE_USERNAME', 'visiontrek'),
         password: env('DATABASE_PASSWORD', '0Gloadmin123#$'),
-        ssl: env.bool('DATABASE_SSL', true) && {
+        ssl: env.bool('DATABASE_SSL', false) && {
           key: env('DATABASE_SSL_KEY', undefined),
           cert: env('DATABASE_SSL_CERT', undefined),
           ca: env('DATABASE_SSL_CA', undefined),
@@ -33,7 +33,7 @@ module.exports = ({ env }) => {
         database: env('DATABASE_NAME', 'store'),
         user: env('DATABASE_USERNAME', 'visiontrek'),
         password: env('DATABASE_PASSWORD', '0Gloadmin123#$'),
-        ssl: env.bool('DATABASE_SSL',true) && {
+        ssl: env.bool('DATABASE_SSL',false) && {
           key: env('DATABASE_SSL_KEY', undefined),
           cert: env('DATABASE_SSL_CERT', undefined),
           ca: env('DATABASE_SSL_CA', undefined),
